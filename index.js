@@ -5,7 +5,7 @@ require('dotenv').config();
 const port = process.env.PORT;
 
 const checkApiKey = require('./middlewares/auths')
-const dataApi = require('./breeds-dogs.json');
+const dataApi = require('./data/breeds-dogs.json');
 
 app.get('/api/breeds-dogs', checkApiKey, (req, res) => {
     res.json(dataApi);
